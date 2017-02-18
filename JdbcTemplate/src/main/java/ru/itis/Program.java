@@ -8,6 +8,8 @@ import ru.itis.dao.UsersDao;
 import ru.itis.model.User;
 import ru.itis.service.UsersService;
 
+import java.util.List;
+
 public class Program {
     public static void main(String[] args) {
         // ApplicationContext context = new ClassPathXmlApplicationContext("ru.itis/context.xml");
@@ -21,6 +23,10 @@ public class Program {
         UsersService service = context.getBean(UsersService.class);
 
         System.out.println(service.isRegistered("Vladislav"));
+
+        List<User> users = usersDao.findAll();
+
+        int i = 0;
 
 
     }
