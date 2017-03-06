@@ -7,6 +7,7 @@
     <groupId>ru.itis</groupId>
     <artifactId>spring-itis</artifactId>
     <version>0.1</version>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
@@ -58,6 +59,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>4.3.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
         </dependency>
     </dependencies>
 
