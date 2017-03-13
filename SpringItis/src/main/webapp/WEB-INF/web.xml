@@ -7,6 +7,24 @@
 
 
     <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextClass</param-name>
+            <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+        </init-param>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>ru.itis.config.SpringConfig</param-value>
+        </init-param>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!--<servlet>
         <servlet-name>usersServlet</servlet-name>
         <servlet-class>ru.itis.servlet.UsersServlet</servlet-class>
     </servlet>
@@ -18,6 +36,6 @@
 
     <listener>
         <listener-class>ru.itis.listeners.SpringContextListener</listener-class>
-    </listener>
+    </listener>-->
 
 </web-app>
